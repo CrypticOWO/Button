@@ -24,7 +24,7 @@ public class Drag : MonoBehaviour
             Vector2 mousePos;       //create a vector called mousePos
             mousePos = Input.mousePosition;         //change the value of mousePos
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);           //change the value of mousePos
-            gameObject.transform.localPosition = new Vector2(mousePos.x, mousePos.y);          //change the positon of the 
+            gameObject.transform.localPosition = new Vector2(mousePos.x, mousePos.y);          //change the positon of the object
         }
     }
 
