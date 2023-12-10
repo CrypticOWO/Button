@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Drag : MonoBehaviour
 {
@@ -44,5 +45,17 @@ public class Drag : MonoBehaviour
     void OnMouseUp()
     {
         isBeingHeld = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "Wall")
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        if (coll.tag == "Finish")
+        {
+            SceneManager.LoadScene("Winner");
+        }
     }
 }
